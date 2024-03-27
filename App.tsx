@@ -5,6 +5,7 @@ import RenderItem from './src/components/RenderItem';
 import React, { useState } from 'react';
 import CustomButton from './src/components/CustomButton';
 import { useSharedValue, withTiming } from 'react-native-reanimated';
+import Pagination from './src/components/Pagination';
 
 export default function App() {
   const {height: SCREEN_HEIGHT} = useWindowDimensions();
@@ -27,6 +28,7 @@ export default function App() {
         })}
       </View>
       <CustomButton handlerPress={handlerPress} buttonVal={buttonVal}/>
+      <Pagination data ={data} buttonVal={buttonVal}/>
     </View>
   );
 }
